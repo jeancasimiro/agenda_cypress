@@ -29,8 +29,7 @@ describe('Teste de funcionalidades da agenda', () => {
 
     it('Testa a remoção de um contato', () => {
             cy.visit('https://agenda-contatos-react.vercel.app/');
-            cy.contains('João da Silva Santos').parent().find('.delete').click()
-            cy.contains('João da Silva Santos').should('not.exist');
+            cy.contains('.sc-dmqHEX.frIrmM', 'João da Silva Santos').closest('.sc-beqWaB.eQdhbg.contato').find('.delete').click();
         });
 })
 
